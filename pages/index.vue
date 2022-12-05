@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>Welcome</h1>
-    <NuxtLink to="/login">To the login page!</NuxtLink>
+    <a href="#" @click="$auth.login()">To the login page!</a>
   </div>
 </template>
 
