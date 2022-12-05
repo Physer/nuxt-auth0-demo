@@ -1,5 +1,8 @@
 <template>
-  <Tutorial/>
+  <div>
+    <h1>Welcome</h1>
+    <NuxtLink to="/login">To the login page!</NuxtLink>
+  </div>
 </template>
 
 <script lang="ts">
