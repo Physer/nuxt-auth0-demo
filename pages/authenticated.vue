@@ -8,7 +8,8 @@
   import Vue from 'vue'
   
   export default Vue.extend({
-    name: 'AuthPage'
+    name: 'AuthPage',
+    middleware: ['auth'],
   })
   </script>
   
