@@ -34,4 +34,14 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+
+  auth: {
+    strategies: {
+      auth0: {
+        domain: process.env.AUTH0_DOMAIN,
+        clientId: process.env.AUTH0_CLIENTID,
+        audience: process.env.AUTH0_AUDIENCE
+      }
+    }
+  }
 };
