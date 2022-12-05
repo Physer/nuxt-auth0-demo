@@ -1,15 +1,15 @@
 <template>
     <div>
-      <h1>Hello</h1>
+        <h1>Secret page!</h1>
     </div>
-  </template>
+</template>
   
-  <script lang="ts">
-  import Vue from 'vue'
-  
-  export default Vue.extend({
+<script lang="ts">
+import Vue from 'vue'
+
+export default Vue.extend({
     name: 'AuthPage',
-    middleware: ['auth'],
-  })
-  </script>
+    middleware: ['auth']
+})
+</script>
   
