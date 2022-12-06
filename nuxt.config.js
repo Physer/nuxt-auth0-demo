@@ -40,8 +40,12 @@ export default {
       auth0: {
         domain: process.env.AUTH0_DOMAIN,
         clientId: process.env.AUTH0_CLIENTID,
-        audience: process.env.AUTH0_AUDIENCE
-      }
-    }
-  }
+        audience: process.env.AUTH0_AUDIENCE,
+        scope: ["openid", "profile", "email", "offline_access"],
+        responseType: "code",
+        grantType: "authorization_code",
+        codeChallengeMethod: "S256",
+      },
+    },
+  },
 };
