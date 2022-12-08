@@ -1,0 +1,10 @@
+services:
+  nuxt-auth0-demo:
+    env_file:
+      - ./.env
+    build:
+      context: .
+    container_name: nuxt-auth0-demo
+    ports:
+      - 3000:3000
+    restart: always
