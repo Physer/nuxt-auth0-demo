@@ -1,69 +1,26 @@
-# nuxt-auth0-demo
+# Nuxt JS - Auth0 Demo
 
-## Build Setup
+## Introduction
+This project is a small demo application that sets up a NuxtJS (v2) application with Auth0.
+The authentication library used for this purpose is [nuxt/auth](https://auth.nuxtjs.org/).
 
-```bash
-# install dependencies
-$ yarn install
+## Project structure
+There are two pages available.
+1. The homepage (index) simply contains a title and a link to log in.
+2. An `/authenticated` page is available on the logged-in users.
 
-# serve with hot reload at localhost:3000
-$ yarn dev
+## How to run
+### Prerequisites
+Make sure you have an Auth0 account with a working tenant that supports a Single Page Application.
+Additionally, this project uses the PKCE flow for improved security. Make sure your Auth0 application supports the PKCE flow.
 
-# build for production and launch server
-$ yarn build
-$ yarn start
+### Docker
+This projects has support for Docker Compose.
+1. Go to the Docker Compose file (`~/docker-compose.yml`) and replace the build arguments in the file with your Auth0 data
+2. Run `docker-compose up`
 
-# generate static project
-$ yarn generate
-```
-
-For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
-
-## Special Directories
-
-You can create the following extra directories, some of which have special behaviors. Only `pages` is required; you can delete them if you don't want to use their functionality.
-
-### `assets`
-
-The assets directory contains your uncompiled assets such as Stylus or Sass files, images, or fonts.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/assets).
-
-### `components`
-
-The components directory contains your Vue.js components. Components make up the different parts of your page and can be reused and imported into your pages, layouts and even other components.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/components).
-
-### `layouts`
-
-Layouts are a great help when you want to change the look and feel of your Nuxt app, whether you want to include a sidebar or have distinct layouts for mobile and desktop.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/layouts).
-
-
-### `pages`
-
-This directory contains your application views and routes. Nuxt will read all the `*.vue` files inside this directory and setup Vue Router automatically.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/get-started/routing).
-
-### `plugins`
-
-The plugins directory contains JavaScript plugins that you want to run before instantiating the root Vue.js Application. This is the place to add Vue plugins and to inject functions or constants. Every time you need to use `Vue.use()`, you should create a file in `plugins/` and add its path to plugins in `nuxt.config.js`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/plugins).
-
-### `static`
-
-This directory contains your static files. Each file inside this directory is mapped to `/`.
-
-Example: `/static/robots.txt` is mapped as `/robots.txt`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/static).
-
-### `store`
-
-This directory contains your Vuex store files. Creating a file in this directory automatically activates Vuex.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store).
+### Local installation
+1. Copy the `.env.example` file and rename it to `.env`
+2. Change the Auth0 example values to the values from your Auth0 application
+3. Run `yarn install`
+4. Run `yarn dev` or `yarn build`/`yarn start`
