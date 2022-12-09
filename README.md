@@ -4,6 +4,8 @@
 This project is a small demo application that sets up a NuxtJS (v2) application with Auth0.
 The authentication library used for this purpose is [nuxt/auth](https://auth.nuxtjs.org/).
 
+The purpose of this demo application is to show how to set-up Auth0 support for a NuxtJS application with Docker support.
+
 ## Project structure
 There are two pages available.
 1. The homepage (index) simply contains a title and a link to log in.
