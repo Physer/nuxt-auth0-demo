@@ -1,7 +1,5 @@
 services:
   nuxt-auth0-demo:
-    env_file:
-      - ./.env
     build:
       context: .
       args:
