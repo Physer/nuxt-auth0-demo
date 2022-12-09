@@ -4,6 +4,10 @@ services:
       - ./.env
     build:
       context: .
+      args:
+        - AUTH0_CLIENTID=clientid_here
+        - AUTH0_DOMAIN=domain_here
+        - AUTH0_AUDIENCE=audience_here
     container_name: nuxt-auth0-demo
     ports:
       - 3000:3000

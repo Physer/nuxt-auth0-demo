@@ -7,6 +7,16 @@ FROM node:16-alpine as builder
 # Use Docker Buildkit for faster build times (https://docs.docker.com/build/buildkit/)
 ENV DOCKER_BUILDKIT=1
 
+# Set up build arguments
+ARG AUTH0_CLIENTID
+ENV AUTH0_CLIENTID=${AUTH0_CLIENTID}
+
+ARG AUTH0_DOMAIN
+ENV AUTH0_DOMAIN=${AUTH0_DOMAIN}
+
+ARG AUTH0_AUDIENCE
+ENV AUTH0_AUDIENCE=${AUTH0_AUDIENCE}
+
 # Create a place in the container to process the NuxtJS application in
 WORKDIR /app
 # Copy all the files (excluding those defined in the .dockerignore file)
